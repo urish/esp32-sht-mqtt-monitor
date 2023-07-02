@@ -28,7 +28,13 @@ String deviceName;
 void setup()
 {
   Serial.begin(115200);
+  
+  #ifdef I2C_SDA && I2C_SCL
+  Wire.begin(I2C_SDA, I2C_SCL);
+  #else
   Wire.begin();
+  #endif
+
   preferences.begin("humimon", false);
 
   deviceName = preferences.getString("deviceName", "");
