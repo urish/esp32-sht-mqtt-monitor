@@ -1,4 +1,4 @@
-# esp8266-sht-mqtt-monitor
+# esp32-sht-mqtt-monitor
 
 Records temperature/humidty and sends it to an MQTT server.
 
